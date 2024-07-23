@@ -1,0 +1,163 @@
+/* chỉnh layout trên mọi kích thước màn hình*/
+
+/*chỉnh css*/
+.header-logo img{
+    height: 100px;
+    margin-left: 50px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+:root{
+    --main-text-color:#333;
+    --sub-text-color: crimson;
+    --main-color-hover: crimson;
+    --main-color-rating: #ff8c00;
+    --main-btn-hover: #000;
+    --main-border:2px solid #000;
+    --main-transtion: all .3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Oswald", sans-serif;
+}
+
+.container{
+    max-width: 1224px;
+    padding: 0 12px;
+    margin: auto;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.header-wraper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-nav{
+    display: flex;
+}
+.header-nav a{
+  color: var(--main-text-color);
+  padding:0 20px;
+  transition:var(--main-transtion); 
+}
+
+.header-nav a:hover{
+    color: var(--main-color-hover);
+}
+.header-nav i{
+    padding:0 6px;
+    font-size: larger;
+    transition: var(--main-transtion);
+    color: var(--main-text-color);
+}
+.header-nav i:hover{
+    color:var(--main-color-hover);
+}
+
+/* banner-top*/
+
+.banner-top{
+    width:100%;
+    height: 100vh;
+    background-image: url('/images/banner-top.jpg');
+    background-size: cover;
+    background-position:right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner-top-text{
+    width: 100%;
+}
+
+.banner-top-text h3{
+    color:var(--sub-text-color);
+}
+
+.banner-top-text h1{
+    text-transform: capitalize;
+    font-size: 45px;
+    margin: 10px 0 30px;
+    color: #ffffffda;
+    
+}
+
+.main-btn{
+    color:var(--main-text-color);
+    border: var(--main-border);
+    padding: 10px 15px;
+    transition: var(--main-transtion);
+}
+.main-btn i{
+    vertical-align: middle;
+}
+.main-btn:hover{
+    background-color: var(--main-btn-hover);
+    color:#fff;
+}
+/*HOT-PRODUCT*/
+.section-title h2{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.section-title h2 span{
+    color:var(--sub-text-color);
+}
+.hot-product-items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    gap:20px;
+    margin: 0px 75px;
+}
+
+.hot-product-item img {
+    width: 100%;
+}
+
+.hot-product-item{
+    position: relative;
+    align-items: center;
+    text-align: center  ;
+    border: 3px solid black;
+}
+
+.hot-product-item:hover{
+    transform: scale(0.9);
+}
+/*cuộn header đổi màu*/
+.sticky{
+    background-color: #ffffffcc;
+}
+/* chỉnh layout màn hình*/
+/* @media(max-width:500px){
+    header{
+
+    }
+
+} */
+.hot-product-item h5{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: red;
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 3px;
+}
