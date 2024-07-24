@@ -161,3 +161,23 @@ header{
     color: #fff;
     border-radius: 3px;
 }
+
+.hot-product-item > i{
+    position: absolute;
+    right: 0;
+    font-size: larger;
+    cursor: pointer;
+    transition: var(--main-transtion);
+}
+
+.hot-product-item > i:hover{
+    color: var(--main-color-hover);
+}
+
+.hot-product-item-rating > i{
+    color: var(--main-color-rating);
+}
+
+.hot-product-item-price > p{
+    font-weight: bolder;
+}
